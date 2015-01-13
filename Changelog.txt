@@ -1,0 +1,33 @@
+Version 11
+	* updated TOC to 6.0
+	* use localized macro command
+
+Version 10
+	* updated TOC to 5.3
+
+Version 9
+	* fixed bug: before changing selection in profession panel the addon would not work because old button is still on top of our button
+
+Version 8
+	* updated TOC to 5.2
+
+Version 7
+	* updated TOC to 5.1
+
+Version 6
+	* readded fix for framelevels. thought this was not needed anymore, but it indeed is.
+
+Version 5
+	* revamped how code is run. this should remove any taint caused by this addon.
+
+Version 4
+	* TOC update for 5.0.4
+
+Version 3
+	* bug fix for sometimes "vanishing" buttons because of framelevels
+
+Version 2
+	* only let "hide/show button" code run when not in combat
+
+Version 1
+	* initial release

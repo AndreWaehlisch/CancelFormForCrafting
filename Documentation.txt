@@ -1,0 +1,9 @@
+== <<size 220%>><<color #FF7D0A>>CancelFormForCrafting<</color>><</size>>
+
+This very lightweight addon removes your shapeshift form when you try to craft something.
+
+When you try to craft and are shapeshifted you would only get the error message "You are in shapeshift form" normally [Edit: This seems to be a bug which comes along with Quartz]. The addon removes your shapeshift and lets you craft your stuff. It is enabled for druids only.
+
+The addon is disabled while you are in combat, so it should not cause any taint.
+
+Just be cautious when trying to craft something while you are in flight form and in mid-air :-)
