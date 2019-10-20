@@ -1,3 +1,6 @@
+Version 12c
+	* re-release for WoW classic
+
 Version 11
 	* updated TOC to 6.0
 	* use localized macro command

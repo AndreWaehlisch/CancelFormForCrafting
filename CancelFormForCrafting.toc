@@ -1,13 +1,13 @@
-## Interface: 60000
+## Interface: 11302
 
 ## Title: CancelFormForCrafting
 
-## Version: 11
+## Version: 12c
 
 ## Notes: Druid only: This addon cancels your current shapeshift form when you try to craft stuff.
 
 ## Notes-deDE: Nur für Druiden: Dieses Addon bricht deine aktuelle Gestaltenwandlung ab, wenn du versucht, etwas herzustellen.
 
-## Author: |cffFF7D0AHoochie|r @EU-Dethecus
+## Author: |cffFF7D0AHoochie|r @EU-Lucifron
 
 CancelFormForCraftingCore.lua
