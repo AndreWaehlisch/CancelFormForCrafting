@@ -1,5 +1,5 @@
 --only enable when player is druid
-if ((select(2,UnitClass("player"))) ~= "DRUID") then
+if ( (select(2, UnitClass("player"))) ~= "DRUID" ) then
 	return;
 end;
 
@@ -47,13 +47,13 @@ ProfessionOpenedFrame:SetScript("OnEvent",function()
 	--initialize when not in combat and trade skill window
 	if ( CraftCreateButton or TradeSkillCreateButton ) and ( not InCombatLockdown() ) then
 		--save old buttons
-		local OldOneButton_craft = CraftCreateButton; -- for e.g. enchanting
-		local OldOneButton, OldAllButton = TradeSkillCreateButton, TradeSkillCreateAllButton; -- for e.g. cooking, alchemy...
+		local OldOneButton_craft = CraftCreateButton; --for e.g. enchanting
+		local OldOneButton, OldAllButton = TradeSkillCreateButton, TradeSkillCreateAllButton; --for e.g. cooking, alchemy...
 
 		if ( doInitCraft and OldOneButton_craft ) then
 			doInitCraft = false;
 
-			-- create new button
+			--create new button
 			local NewOneButton_craft = ReplaceButton(OldOneButton_craft);
 
 			--enable/disable and show/hide our buttons
@@ -80,13 +80,6 @@ ProfessionOpenedFrame:SetScript("OnEvent",function()
 				end;
 			end);
 
-			--on setup we have to run code above or click on Create(All)Button will not work until we change selection
-			local tsIndex = GetCraftSelectionIndex();
-			if ( tsIndex == 0 ) then
-				tsIndex = GetFirstTradeSkill();
-			end;
-			CraftFrame_SetSelection(tsIndex);
-
 			--when we enter combat our addon is disabled so we dont cause taint: show old button
 			local CombatFrame = CreateFrame("Frame");
 			CombatFrame:RegisterEvent("PLAYER_REGEN_DISABLED");
@@ -98,11 +91,6 @@ ProfessionOpenedFrame:SetScript("OnEvent",function()
 					OldOneButton_craft:Show();
 				else
 					userCombat = false;
-					local tsIndex = GetCraftSelectionIndex();
-					if ( tsIndex == 0 ) then
-						tsIndex = GetFirstTradeSkill();
-					end;
-					CraftFrame_SetSelection(tsIndex);
 				end;
 			end);
 
@@ -159,13 +147,6 @@ ProfessionOpenedFrame:SetScript("OnEvent",function()
 				end;
 			end);
 
-			--on setup we have to run code above or click on Create(All)Button will not work until we change selection
-			local tsIndex = GetTradeSkillSelectionIndex();
-			if ( tsIndex == 0 ) then
-				tsIndex = GetFirstTradeSkill();
-			end;
-			TradeSkillFrame_SetSelection(tsIndex);
-
 			--when we enter combat our addon is disabled so we dont cause taint: show old buttons
 			local CombatFrame = CreateFrame("Frame");
 			CombatFrame:RegisterEvent("PLAYER_REGEN_DISABLED");
@@ -183,7 +164,6 @@ ProfessionOpenedFrame:SetScript("OnEvent",function()
 					end;
 				else
 					userCombat = false;
-					TradeSkillFrame_SetSelection(TradeSkillFrame.selectedSkill);
 				end;
 			end);
 
