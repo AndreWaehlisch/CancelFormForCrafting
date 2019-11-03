@@ -5,6 +5,8 @@ end;
 
 --setup locals
 local userCombat = false;
+local doInitCraft = true;
+local doInitTradeSkill = true;
 
 --create and return new button
 local function ReplaceButton(oldbuttonLink)
@@ -48,7 +50,9 @@ ProfessionOpenedFrame:SetScript("OnEvent",function()
 		local OldOneButton_craft = CraftCreateButton; -- for e.g. enchanting
 		local OldOneButton, OldAllButton = TradeSkillCreateButton, TradeSkillCreateAllButton; -- for e.g. cooking, alchemy...
 
-		if ( OldOneButton_craft ) then
+		if ( doInitCraft and OldOneButton_craft ) then
+			doInitCraft = false;
+
 			-- create new button
 			local NewOneButton_craft = ReplaceButton(OldOneButton_craft);
 
@@ -105,7 +109,9 @@ ProfessionOpenedFrame:SetScript("OnEvent",function()
 			ProfessionOpenedFrame:UnregisterEvent("CRAFT_SHOW");
 		end;
 
-		if ( TradeSkillCreateButton ) then
+		if ( doInitTradeSkill and TradeSkillCreateButton ) then
+			doInitTradeSkill = false;
+
 			--create new buttons
 			local NewOneButton = ReplaceButton(OldOneButton);
 			local NewAllButton = ReplaceButton(OldAllButton);
