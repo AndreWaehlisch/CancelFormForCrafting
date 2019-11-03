@@ -1,3 +1,6 @@
+Version 13c
+	* fix sometimes overlaying two buttons
+
 Version 12c
 	* re-release for WoW classic
 
