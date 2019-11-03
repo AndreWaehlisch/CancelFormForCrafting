@@ -2,7 +2,7 @@
 
 ## Title: CancelFormForCrafting
 
-## Version: 12c
+## Version: 13c
 
 ## Notes: Druid only: This addon cancels your current shapeshift form when you try to craft stuff.
 
