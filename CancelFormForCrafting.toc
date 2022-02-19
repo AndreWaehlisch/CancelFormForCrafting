@@ -1,4 +1,4 @@
-## Interface: 11307
+## Interface: 11402
 
 ## Title: CancelFormForCrafting
 
@@ -8,6 +8,6 @@
 
 ## Notes-deDE: Nur für Druiden: Dieses Addon bricht deine aktuelle Gestaltenwandlung ab, wenn du versucht, etwas herzustellen.
 
-## Author: |cffFF7D0AHoochie|r @EU-Lucifron
+## Author: |cffFF7D0AHoochie|r @EU-Venoxis
 
 CancelFormForCraftingCore.lua
